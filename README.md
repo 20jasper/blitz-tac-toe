@@ -1,8 +1,8 @@
-# 2 player tic-tac-toe
+# Blitz Tac Toe
 
-A 2–player tic-tac-toe game with win and draw validation
+A 2–player tic-tac-toe game with a twist—there is a 5 second timer starting each turn—and if it reaches 0, something bad happens. Additionally, if the game ends in a draw, whichever player spent the least time wins.
 
-**Link to project:** https://2-player-tic-tac-toe.netlify.app/
+**Link to project:** https://blitztactoe.netlify.app/
 
 ![an animation of a game of tic tac toe](tictactoe.gif)
 
