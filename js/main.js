@@ -100,6 +100,11 @@ class TicTacToe {
     document.querySelector('h2').classList.toggle('hidden');
   }
 }
+class BlitzTacToe extends TicTacToe {
+  constructor(firstPlayer, currentPlayer, gameBoard, turn) {
+    super(firstPlayer, currentPlayer, gameBoard, turn)
+  }
+}
 
-const ticTacToe = new TicTacToe
-ticTacToe.startGame()
+const blitzTacToe = new BlitzTacToe
+blitzTacToe.startGame()
