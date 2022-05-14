@@ -1,3 +1,6 @@
+import { Timer } from './timer.js'
+console.log(Timer)
+
 class TicTacToe {
   constructor() {
     this.firstPlayer = this.firstPlayer()
@@ -100,6 +103,7 @@ class TicTacToe {
     document.querySelector('h2').classList.toggle('hidden');
   }
 }
+
 class BlitzTacToe extends TicTacToe {
   constructor(firstPlayer, currentPlayer, gameBoard, turn) {
     super(firstPlayer, currentPlayer, gameBoard, turn)
@@ -107,4 +111,5 @@ class BlitzTacToe extends TicTacToe {
 }
 
 const blitzTacToe = new BlitzTacToe
+const timer = new Timer
 blitzTacToe.startGame()
