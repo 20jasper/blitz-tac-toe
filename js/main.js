@@ -108,6 +108,16 @@ class BlitzTacToe extends TicTacToe {
   constructor(firstPlayer, currentPlayer, gameBoard, turn) {
     super(firstPlayer, currentPlayer, gameBoard, turn)
   }
+  startGame() {
+    super.startGame()
+    timer.start()
+  }
+  nextTurn() {
+    timer.stop()
+    console.log(timer.duration / 1000, 'duration')
+    timer.start()
+    super.nextTurn()
+  }
 }
 
 const blitzTacToe = new BlitzTacToe
