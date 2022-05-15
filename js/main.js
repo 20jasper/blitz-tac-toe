@@ -109,14 +109,28 @@ class BlitzTacToe extends TicTacToe {
     super(firstPlayer, currentPlayer, gameBoard, turn)
   }
   startGame() {
+    this.xTotalTime = 0
+    this.oTotalTime = 0
     super.startGame()
     timer.start()
   }
+
   nextTurn() {
     timer.stop()
-    console.log(timer.duration / 1000, 'duration')
-    timer.start()
+    this.addTime()
     super.nextTurn()
+    timer.start()
+  }
+
+  addTime() {
+    console.log(timer.duration / 1000, 'duration')
+    if (this.currentPlayer === 'x') {
+      this.xTotalTime += timer.duration
+      console.log(this.xTotalTime / 1000, 'x time')
+    } else {
+      this.oTotalTime += timer.duration
+      console.log(this.oTotalTime / 1000, 'o time')
+    }
   }
 }
 
